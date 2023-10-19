@@ -1,0 +1,20 @@
+@using EleWise.ELMA 
+@using EleWise.ELMA.BPM.Web.Common.Extensions 
+@using Microsoft.CSharp 
+@using EleWise.ELMA.Documents.Web 
+@using EleWise.ELMA.Documents.Web.Models
+@using EleWise.ELMA.Documents.Web.Components
+@using EleWise.ELMA.Model.Views
+@using EleWise.ELMA.Web.Mvc.Views.ViewItem
+@using EleWise.ELMA.Documents.Docflow;
+@using EleWise.ELMA.Documents
+@using EleWise.ELMA.Documents.Models
+
+<!--Замените .Document на переменную документа из контекста -->
+
+@{
+var document = ((IDocument)((dynamic)Model.Entity).Document);
+}
+
+
+@Html.Partial("Document/TabView", document)
